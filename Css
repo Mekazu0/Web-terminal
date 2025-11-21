@@ -1,0 +1,91 @@
+/* General Resets and Base Styles */ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+body { 
+    font-family: 'Roboto Mono', 'Consolas', monospace; 
+    background-color: #1e1e1e; /* Dark background */ 
+    color: #e0e0e0; /* Light gray text */ 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    overflow: hidden; /* Prevent body scroll */ 
+} 
+ 
+/* Header Styling */ 
+header { 
+    background-color: #252526; /* Slightly lighter dark */ 
+    color: #00bcd4; /* Cyan accent */ 
+    padding: 1rem; 
+    text-align: center; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+    border-bottom: 2px solid #00bcd4; 
+} 
+ 
+header h1 { 
+    font-size: 1.8em; 
+    margin-bottom: 0.5rem; 
+    text-shadow: 0 0 8px rgba(0, 188, 212, 0.5); 
+} 
+ 
+header p { 
+    font-size: 0.9em; 
+    color: #cccccc; 
+} 
+ 
+/* Main Content Area */ 
+main { 
+    flex-grow: 1; /* Take up available space */ 
+    display: flex; 
+    padding: 10px; 
+    background-color: #121212; /* Even darker for main background */ 
+} 
+ 
+/* Terminal Container Styling */ 
+#terminal-container { 
+    flex-grow: 1; 
+    background-color: #000; /* Pure black for terminal background */ 
+    border: 1px solid #00bcd4; /* Cyan border */ 
+    border-radius: 5px; 
+    overflow: hidden; /* Important for Xterm.js */ 
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4); 
+} 
+ 
+/* Xterm.js specific overrides */ 
+.xterm .xterm-viewport { 
+    background-color: #000; 
+} 
+ 
+.xterm-rows > div { 
+    line-height: 1.2; 
+} 
+ 
+/* Footer Styling */ 
+footer { 
+    background-color: #252526; 
+    color: #999999; 
+    padding: 0.7rem; 
+    text-align: center; 
+    font-size: 0.8em; 
+    border-top: 1px solid #333; 
+} 
+ 
+/* Responsive adjustments */ 
+@media (max-width: 768px) { 
+    header h1 { 
+        font-size: 1.4em; 
+    } 
+    header p { 
+        font-size: 0.8em; 
+    } 
+    main { 
+        padding: 5px; 
+    } 
+    #terminal-container { 
+        border-radius: 3px; 
+    } 
+} 
+
